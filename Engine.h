@@ -2,7 +2,9 @@
 
 #include <iostream>
 #include <vector>
+#include <set>
 #include <string>
+#include <algorithm>
 
 class Engine {
 private:
@@ -11,9 +13,13 @@ private:
 	char emptyChar;
 	std::vector<std::vector<char>> gameState;
 	std::vector<std::vector<char>> gameScore;
+	int turns = 0;
+	bool fail = false;
+	std::set<std::string> possibleGuesses;
 
 public:
 	Engine(
+		std::set<std::string> _possGuess,
 		std::string _word = "TRAIL",
 		char _emptyChar = '-'
 	);
