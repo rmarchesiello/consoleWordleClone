@@ -4,10 +4,8 @@
 #include "Engine.h"
 
 Engine::Engine(std::string _word, char _emptyChar) : word(_word), emptyChar(_emptyChar), wordSize(_word.size()) {
-	
 	gameScore.resize(5, std::vector<char>(5, emptyChar));
 	gameState.resize(5, std::vector<char>(5, emptyChar));
-
 }
 
 void Engine::printInstructions() { // Print the game's instructions
